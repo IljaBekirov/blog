@@ -1,0 +1,8 @@
+#logo.hidden-sm.hidden-xs.clearfix
+  %a{ href: root_path }= t('admin_panel')
+- if current_user&.activated?
+  %ul.list-unstyled.components
+    %li{ :class => "menu-link" }
+      %a{ href: root_path }
+        %span= fa_icon('shopping-cart')
+        %span= t('title')
